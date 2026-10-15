@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Klim Thinks — AI WhatsApp Chat Report</title>
+  <meta name="description" content="Upload chat WhatsApp dan dapatkan analisis psikologis tajam, blak-blakan, dan mendalam tentang dinamika hubungan kalian.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-link" id="navHomeBtn">
+        <div class="avatar-ring">
+          <span class="avatar-emoji">🧠</span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">Klim</span>
+          <span class="brand-sub">AI Relationship Diagnosis</span>
+        </div>
+      </a>
+      
+      <div class="header-actions">
+        <button type="button" class="btn-api-key" id="openApiKeyModal" title="Pengaturan AI API Key (Opsional)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="api-status-label" id="apiStatusLabel">Engine: Built-in Free</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    
+    <!-- VIEW 1: UPLOAD & SETUP (LANDING) -->
+    <section id="uploadView" class="view-panel active">
+      <div class="hero-box">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> 100% Gratis & Privasi Aman di Browser
+        </div>
+        <h1 class="hero-title">Upload Chat WhatsApp Kalian.<br><em>Biarkan Klim Menguliti Semuanya.</em></h1>
+        <p class="hero-subtitle">
+          Siapa yang sebenarnya lebih peduli? Kapan titik perubahan hubungan kalian terjadi? 
+          Dan apa opini jujur seorang AI yang membaca tiap kata tanpa filter?
+        </p>
+      </div>
+
+      <!-- Upload Card -->
+      <div class="upload-card">
+        <div class="drop-zone" id="dropZone">
+          <input type="file" id="fileInput" accept=".txt" class="file-input-hidden">
+          <div class="drop-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <h3>Pilih atau Seret File Chat (.txt) ke Sini</h3>
+          <p>Export Chat WhatsApp (Pilih: <strong>Tanpa Media / Without Media</strong>)</p>
+          <button type="button" class="btn-primary" id="selectFileBtn">Pilih File .txt</button>
+        </div>
+
+        <div class="demo-divider">
+          <span>atau coba dengan data simulasi langsung</span>
+        </div>
+
+        <div class="demo-buttons">
+          <button type="button" class="btn-secondary" id="loadDemoBtn">
+            <span>🎭</span> Load Demo: <strong>Jibril & Kia (41.100 Pesan)</strong>
+          </button>
+        </div>
+
+        <!-- How to Export Guide Accordion -->
+        <details class="export-guide">
+          <summary>💡 Cara Export Chat dari WhatsApp (Android / iPhone / Web)</summary>
+          <div class="guide-steps">
+            <ol>
+              <li>Buka WhatsApp dan buka chat room dengan pasangan/sahabatmu.</li>
+              <li>Klik ikon titik tiga (⋮) di pojok kanan atas (Android) atau klik nama kontak di atas (iPhone).</li>
+              <li>Pilih <strong>Lainnya (More)</strong> &rarr; <strong>Ekspor Chat (Export Chat)</strong>.</li>
+              <li>Pilih opsi <strong>Tanpa Media (Without Media)</strong> agar berformat teks <code>.txt</code> ringan.</li>
+              <li>Simpan file atau kirim ke komputermu, lalu upload di sini!</li>
+            </ol>
+            <p class="guide-privacy-note">🔒 <strong>Privasi 100% Terjamin:</strong> Seluruh teks dibaca dan diproses langsung di browsermu sendiri. Teks chat tidak diunggah ke database mana pun.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Features Preview Section -->
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <h4>Metrik Realistis</h4>
+          <p>Hitung rasio kata, siapa yang paling sering chat duluan, jam paling aktif, dan waktu balas.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💬</div>
+          <h4>WhatsApp Bubble Replay</h4>
+          <p>Menampilkan momen krusial chat lengkap dengan style bubble WhatsApp autentik.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔪</div>
+          <h4>Gaya Bahasa Klim</h4>
+          <p>Tajam, sinis, sastrawi, dan membedah psikologis kedua belah pihak tanpa sensor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: PROCESSING ANIMATION -->
+    <section id="processingView" class="view-panel">
+      <div class="processing-card">
+        <div class="brandon-thinking-avatar">
+          <div class="aura-spinner"></div>
+          <span class="thinking-emoji">🧠</span>
+        </div>
+        <h2 id="processStatusTitle">Klim sedang membaca chat kalian...</h2>
+        <p id="processStatusSub">Membedah 41.100 pesan, pola respons, dan detak trauma emosional.</p>
+        
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+        
+        <div class="processing-logs" id="processingLogs">
+          <p class="log-line">Menganalisis frekuensi pesan...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: REPORT PAGE (WHAT BRANDON THINKS STYLE) -->
+    <section id="reportView" class="view-panel">
+      
+      <!-- Report Sub-Header / Back Bar -->
+      <div class="report-navbar">
+        <button type="button" class="btn-icon-back" id="backToUploadBtn" title="Kembali">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+        </button>
+        <div class="report-tabs-bar">
+          <button type="button" class="tab-btn active" id="tabReport1" data-report="1">Report 1: Diagnosis</button>
+          <button type="button" class="tab-btn" id="tabReport2" data-report="2">Report 2: Solusi</button>
+          <button type="button" class="tab-btn" id="tabReport3" data-report="3">Report 3: Penghargaan</button>
+          <button type="button" class="tab-btn" id="tabReport4" data-report="4">Report 4: Bahasa Rahasia</button>
+          <button type="button" class="tab-btn" id="tabReport5" data-report="5">Report 5: Timeline</button>
+        </div>
+        <div class="report-nav-actions">
+          <button type="button" class="btn-sm" id="printReportBtn" title="Print / Simpan PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>PDF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Report Document Body -->
+      <article class="report-container">
+        
+        <!-- Main Title Header -->
+        <header class="report-header">
+          <h1 class="report-main-title" id="reportTitle">Menjaga Sangkar yang Pintunya Sudah Lama Terbuka</h1>
+          
+          <!-- Author Banner Card -->
+          <div class="author-banner">
+            <div class="author-avatar-wrap">
+              <span class="author-avatar-char">🧠</span>
+            </div>
+            <div class="author-text">
+              <span class="author-name">Klim</span>
+              <p class="author-desc">An AI with no filter, too many opinions and an unexplained fondness for lasagna.</p>
+            </div>
+          </div>
+
+          <!-- Share & Privacy Badges -->
+          <div class="report-toolbar">
+            <button type="button" class="btn-share" id="shareBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v13"></path><path d="m16 6-4-4-4 4"></path><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path></svg>
+              <span>Salin Teks / Bagikan Laporan</span>
+            </button>
+            <div class="privacy-notice">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <span>Data kalian sepenuhnya privat dan diproses secara aman.</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Stats Overview Cards -->
+        <section class="stats-grid" id="statsGrid">
+          <div class="stat-card">
+            <span class="stat-num" id="statTotalMsgs">41.100</span>
+            <span class="stat-lbl">Total Pesan Terbaca</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" id="statParticipantRatio">54% : 46%</span>
+            <span class="stat-lbl" id="statParticipantsLabel">Rasio Bicara</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" id="statActiveHours">23:00 - 02:00</span>
+            <span class="stat-lbl">Jam Paling Rawan</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" id="statDeletedMsgs">128</span>
+            <span class="stat-lbl">Pesan Dihapus</span>
+          </div>
+        </section>
+
+        <!-- Narrative Editorial Prose -->
+        <div class="editorial-prose" id="editorialProse">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Unlock / Free Full Access Banner -->
+        <div class="unlock-banner" id="unlockBanner">
+          <div class="unlock-inner">
+            <span class="lock-icon">🔓</span>
+            <div class="unlock-info">
+              <h3>Seluruh Analisis Terbuka Penuh (Free & Unlocked)</h3>
+              <p>Di versi asli What Brandon Thinks bagian ini terpotong & berbayar, tapi di sini seluruh bagian laporan dibuka tanpa batasan apapun.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table of Contents / Index Checklist -->
+        <div class="report-index-box">
+          <h3 class="index-title">Bagian Laporan Ini:</h3>
+          <ul class="index-list" id="indexList">
+            <li>🎭 Profil Dua Karakter: Peran yang Dimainkan vs. Kenyataan</li>
+            <li>🔤 Kamus Bahasa Rahasia: Dialek di Balik Teks</li>
+            <li>⚖️ Yelp Review: Menjalani Hubungan Bersama Kalian</li>
+            <li>💔 Kronologi Keretakan: Ketika Tali Terlalu Kencang Ditarik</li>
+            <li>🗣️ Percakapan yang Tak Pernah Terucap (Subteks sebagai Teks)</li>
+          </ul>
+        </div>
+
+      </article>
+    </section>
+
+  </main>
+
+  <!-- API KEY MODAL (Optional Settings) -->
+  <div class="modal-overlay" id="apiKeyModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Pengaturan AI Engine</h3>
+        <button type="button" class="btn-close" id="closeApiKeyModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Secara default, aplikasi menggunakan <strong>Mesin Analisis Cerdas Bawaan (Gratis 100% tanpa API Key)</strong> yang sudah diprogram meniru gaya Klim.
+        </p>
+        <p class="modal-desc">
+          Jika kamu punya API Key sendiri (Google Gemini gratis atau OpenAI) untuk analisis yang lebih kontekstual:
+        </p>
+        
+        <div class="form-group">
+          <label for="aiProviderSelect">Pilih Provider:</label>
+          <select id="aiProviderSelect" class="form-select">
+            <option value="builtin">Built-in Offline Engine (Gratis & Cepat)</option>
+            <option value="gemini">Google Gemini API (Tersedia Free Tier)</option>
+            <option value="openai">OpenAI (GPT-4o / GPT-4o-mini)</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="apiKeyInputGroup" style="display: none;">
+          <label for="apiKeyInput">API Key Kamu:</label>
+          <input type="password" id="apiKeyInput" class="form-input" placeholder="Masukkan API Key...">
+          <small class="form-help">Key hanya disimpan di LocalStorage browsermu.</small>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-primary" id="saveApiKeyBtn">Simpan Pengaturan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotice">Link disalin ke clipboard!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
