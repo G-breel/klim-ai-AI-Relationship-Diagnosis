@@ -151,10 +151,12 @@ function setupEventListeners() {
     }
   });
 
-  // Demo Button
-  loadDemoBtn.addEventListener('click', () => {
-    loadDemoReport();
-  });
+  // Demo Button (Optional)
+  if (loadDemoBtn) {
+    loadDemoBtn.addEventListener('click', () => {
+      loadDemoReport();
+    });
+  }
 
   // Modal Settings
   openApiKeyModal.addEventListener('click', () => {
